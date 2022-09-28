@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="playground.c" />
+    <ClCompile Include="externals\src\stb_image.c" />
+    <ClCompile Include="externals\src\gl.c" />
+    <ClCompile Include="playground_backend_glfw.c" />
+    <ClCompile Include="config.c" />
+    <ClCompile Include="externals\src\miniaudio.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="playground.h" />
+    <ClInclude Include="externals\include\miniaudio.h" />
+  </ItemGroup>
+</Project>

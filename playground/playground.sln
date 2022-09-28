@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "playground", "playground.vcxproj", "{4A6F7428-6F79-4A74-96D2-0C137D986233}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sokoban", "examples\sokoban.vcxproj", "{E6C32FDF-4A26-476F-9313-298084B02ECF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A6F7428-6F79-4A74-96D2-0C137D986233}.Debug|x64.ActiveCfg = Debug|x64
+		{4A6F7428-6F79-4A74-96D2-0C137D986233}.Debug|x64.Build.0 = Debug|x64
+		{4A6F7428-6F79-4A74-96D2-0C137D986233}.Debug|x86.ActiveCfg = Debug|x64
+		{4A6F7428-6F79-4A74-96D2-0C137D986233}.Release|x64.ActiveCfg = Release|x64
+		{4A6F7428-6F79-4A74-96D2-0C137D986233}.Release|x64.Build.0 = Release|x64
+		{4A6F7428-6F79-4A74-96D2-0C137D986233}.Release|x86.ActiveCfg = Release|x64
+		{E6C32FDF-4A26-476F-9313-298084B02ECF}.Debug|x64.ActiveCfg = Debug|x64
+		{E6C32FDF-4A26-476F-9313-298084B02ECF}.Debug|x64.Build.0 = Debug|x64
+		{E6C32FDF-4A26-476F-9313-298084B02ECF}.Debug|x86.ActiveCfg = Debug|Win32
+		{E6C32FDF-4A26-476F-9313-298084B02ECF}.Debug|x86.Build.0 = Debug|Win32
+		{E6C32FDF-4A26-476F-9313-298084B02ECF}.Release|x64.ActiveCfg = Release|x64
+		{E6C32FDF-4A26-476F-9313-298084B02ECF}.Release|x64.Build.0 = Release|x64
+		{E6C32FDF-4A26-476F-9313-298084B02ECF}.Release|x86.ActiveCfg = Release|Win32
+		{E6C32FDF-4A26-476F-9313-298084B02ECF}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4A8C47B-ABF5-4189-AECD-16FE7B2DF424}
+	EndGlobalSection
+EndGlobal
