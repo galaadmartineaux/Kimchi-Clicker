@@ -11,15 +11,7 @@ void save(Game* game, int index)
     char buffer[19];
     sprintf(buffer, "save%d.sav", index);
     FILE* savefile = fopen(buffer, "w");
-    fputc(game->kimchi.value,savefile);
-    fputc(game->kimchi.eated,savefile);
-    fputc(game->visual.menu,savefile);
-    fputc(game->visual.offset,savefile);
-    fputc(game->kimchi.per_second,savefile);
-    fputc(game->kimchi.thrown,savefile);
-    fputc(game->visual.last_action,savefile);
-    fputc(game->scene,savefile);
-    fputc(game->timepassing,savefile);
+    fwrite(game, sizeof(Game), 1, savefile);
 
     fclose(savefile);
 }
@@ -35,6 +27,7 @@ int load(Game* game, int index)
     }
     else
     {
+        /*
         game->kimchi.value= fgetc(savefile);
         game->kimchi.eated = fgetc(savefile);
         game->visual.menu = fgetc(savefile);
@@ -43,15 +36,10 @@ int load(Game* game, int index)
         game->kimchi.thrown = fgetc(savefile);
         game->visual.last_action = fgetc(savefile);
         game->timepassing = fgetc(savefile);
-        game->is_dialog = fgetc(savefile);
+        game->is_dialog = fgetc(savefile);*/
+        fread(game, sizeof(Game), 1, savefile);
         fclose(savefile);
     }
-}
-
-int saveexist(int max_saves)
-{
-    
-
 }
 
 

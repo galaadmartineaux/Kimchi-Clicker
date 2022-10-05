@@ -12,30 +12,28 @@
 
 int im_print_text(int x, int y, const char* text)
 {
-    int i;
-    for (i = 0; text[i] != '\0'; ++i)
+    for (int i = 0; text[i] != '\0'; ++i)
+    {
         pg_put_char(x + i, y, text[i], PG_COL_REPLACE);
-    return i;
+    }
 }
 
-int im_print(int x, int y, const char* format, ...)
+int im_print(int x, int y, const char* txt, ...)
 {
     va_list list;
-    va_start(list, format);
+    va_start(list, txt);
 
     char buffer[1024];
 
-    vsprintf(buffer, format, list);
+    vsprintf(buffer, txt, list);
     int len = im_print_text(x, y, buffer);
 
     va_end(list);
-
-    return len;
 }
 
 bool im_button(int x, int y, const char* text)
 {
-    int len = strlen(text);
+    int length = strlen(text);
 
     int mouseX, mouseY;
     pg_get_mouse_coords(&mouseX, &mouseY);
@@ -43,8 +41,7 @@ bool im_button(int x, int y, const char* text)
     bool clicked = false;
     bool hover = false;
     bool down = false;
-    if (   mouseX >= x && mouseX < x + len
-        && mouseY >= y && mouseY < y + 1)
+    if (   mouseX >= x && mouseX < x + length && mouseY >= y && mouseY < y + 1)
     {
         hover = true;
         clicked = pg_io_mouse_button_released(GLFW_MOUSE_BUTTON_LEFT);
@@ -58,11 +55,11 @@ bool im_button(int x, int y, const char* text)
     }
     else if (hover)
     {
-        pg_set_default_bg_color(0xff666666);
+        pg_set_default_bg_color(0xFFAAAAAA);
     }
     else
     {
-        pg_set_default_bg_color(0xff444444);
+        pg_set_default_bg_color(0xFF222222);
     }
 
     im_print_text(x, y, text);

@@ -69,4 +69,7 @@ void scene1_mainmenu(Game* game)
     printflag( ((WINDOW_WIDTH / 4) * 3) - (strlen("Français") / 2), 20, "france");
     printflag( (WINDOW_WIDTH / 4) - (strlen("English") / 2) , 20, "");
 
+
+    im_print(0,47, "GALAAD MARTINEAUX");
+    im_print(WINDOW_WIDTH - strlen("ISART DIGITAL"),47, "ISART DIGITAL");
 }

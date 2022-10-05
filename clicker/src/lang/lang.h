@@ -36,6 +36,9 @@ typedef struct Lang
     const char* menu_game;
 
     const char* dialog_shopkeeper;
+    const char* dialog_shopkeeper2;
+    const char* dialog_shopkeeper3;
+    const char* notenoughmoney;
 
     const char* error_load;
     

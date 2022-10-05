@@ -57,6 +57,32 @@ void debug_button_kimchi_thrown(Game* game)
     print_text(18, 14,"%d", game->kimchi.thrown);
 }
 
+void debug_button_lollipops(Game* game)
+{
+    if (im_button(1, 16, "Lollipops = ") == true && pg_io_key_down(GLFW_KEY_RIGHT))
+    {
+        game->lollipops.value ++;
+    }
+    else if (im_button(1, 16, "Lollipops = ") == true && pg_io_key_down(GLFW_KEY_LEFT))
+    {
+        game->lollipops.value --;
+    }
+    print_text(13, 16,"%d", game->lollipops.value);
+}
+
+void debug_button_menu(Game* game)
+{
+    if (im_button(1, 16, "Menu = ") == true && pg_io_key_down(GLFW_KEY_RIGHT))
+    {
+        game->visual.menu ++;
+    }
+    else if (im_button(1, 16, "Menu = ") == true && pg_io_key_down(GLFW_KEY_LEFT))
+    {
+        game->visual.menu --;
+    }
+    print_text(13, 16,"%d", game->visual.menu);
+}
+
 void scene99_debug(Game* game)
 {
     debug_button_kimchi_per_second(game);

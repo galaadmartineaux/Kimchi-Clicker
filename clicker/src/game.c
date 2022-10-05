@@ -92,6 +92,9 @@ void lang_init(Game* game, const char* langc)
 
 
         game->lang.dialog_shopkeeper = "Shopkeeper: Heya, my comrade!";
+        game->lang.dialog_shopkeeper2 = "Shopkeeper: I can sell you my lollipop plains. Pick one and another grows! (150 kimchis)";
+        game->lang.dialog_shopkeeper3 = "You acquired the lollipop plains!";
+        game->lang.notenoughmoney = "You do not have enough kimchis. You need %d more to buy this.";
 
         game->lang.error_load = "Failed to load save! This slot may be unused.";
     }
@@ -143,6 +146,16 @@ void last_action(Game* game)
         print_text(0, 49, game->lang.dialog_shopkeeper);
         break;
 
+    case 52:
+        print_text(0, 49, game->lang.dialog_shopkeeper2);
+        break;
+
+    case 53:
+        print_text(0, 49, game->lang.dialog_shopkeeper3);
+        break;
+    case 54:
+        print_text(0,49, game->lang.notenoughmoney, 150 - game->kimchi.value);
+        break;
     case 101:
         print_text(0, 49, game->lang.error_load);
         break;

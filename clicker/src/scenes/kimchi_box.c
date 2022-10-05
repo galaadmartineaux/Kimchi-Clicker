@@ -31,12 +31,15 @@ void button_throwkimchis(Game* game)
 
 void button_enablemenu(Game* game)
 {
-    if (im_button(1, 6 + game->visual.offset, game->lang.bribe) == true && game->visual.menu < 3)
+    if (game->visual.menu < 2)
     {
-        game->kimchi.value-= 30;
-        game->visual.last_action = 3;
-        game->visual.menu += 1;
-        game->visual.offset = 6;
+        if (im_button(1, 6 + game->visual.offset, game->lang.bribe) == true && game->visual.menu < 2)
+        {
+            game->kimchi.value-= 30;
+            game->visual.last_action = 3;
+            game->visual.menu += 1;
+            game->visual.offset = 6;
+        }
     }
 }
 
