@@ -1,0 +1,2 @@
+
+#define WINDOW_WIDTH 100
